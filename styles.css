@@ -1,0 +1,427 @@
+:root{
+    --bg1: #0b2b5f;
+    --bg2: #071c3f;
+    --accent: #f28a00;
+    --accent2: #ffd34d;
+    --text: #121417;
+    --muted: #5e6772;
+    --surface: #ffffff;
+    --surface2: #fff6ea;
+    --line: rgba(0,0,0,0.12);
+    --shadow: 0 12px 28px rgba(0,0,0,0.14);
+    --radius: 14px;
+}
+
+*{ box-sizing: border-box;}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+    background:
+        radial-gradient(circle at 18% 14%, rgba(255, 211, 77, 0.30), transparent 42%),
+        radial-gradient(circle at 86% 12%, rgba(242, 138, 0, 0.22), transparent 48%),
+        linear-gradient(180deg, #fff3df, #ffe6bf);
+}
+
+.container{
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.site-header{
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    border-bottom: 4px solid var(--accent2);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.header-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand h1{
+    margin: 0;
+    color: #fff;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.tagline{
+    margin: 4px 0 0 0;
+    color: rgba(225,255,255,0.85);
+    font-size: 0.95rem;
+}
+
+.site-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.08);
+}
+
+.nav-link:hover{
+    background: rgba(255,255,255,0.16);
+}
+
+.nav-link[aria-current="page"]{
+    background: linear-gradient(180deg, var(--accent), #cf7300);
+    border-color: rgba(0,0,0,0.18);
+}
+
+.hero{
+    margin-top: 18px;
+    background: linear-gradient(180deg, #ffffff, var(--surface2));
+    border: 1px solid var(--line);
+    border-left: 10px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+.hero h2{
+    margin: 0 0 10px 0;
+    color: #071c3f;
+}
+
+.hero p{
+    margin: 0;
+}
+
+.card{
+    margin: 16px 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+.card h2{
+    margin: 0 0 10px 0;
+    color: #071c3f;
+}
+
+.stack h3{
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #0b2b5f;
+}
+
+.aside{
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 1px dashed rgba(0,0,0,0.22);
+    background: linear-gradient(180deg, #fff9ef, #fff1d9);
+}
+
+.aside h3{
+    margin: 0 0 8px 0;
+}
+
+.styled-list{
+    padding-left: 22px;
+    margin: 10px 0 0 0;
+}
+
+.styled-list li{
+    margin: 6px 0;
+}
+
+.styled-list li::marker{
+    color: #cf7300;
+    font-weight: bold;
+}
+
+.db-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    border: 1px solid rgba(0,0,0,0.14);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.db-table thead th{
+    background: linear-gradient(90deg, var(--accent), #cf7300);
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    letter-spacing: 0.2px;
+}
+
+.db-table tbody td{
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.10);
+    vertical-align: top;
+}
+
+.db-table tbody tr:nth-child(even){
+    background: rgba(11, 43, 95, 0.06);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.profile{
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: var(--radius);
+    padding: 14px;
+    background: linear-gradient(180deg, #ffffff, var(--surface2));
+}
+
+.profile h3{
+    margin: 0 0 10px 0;
+    color: #071c3f;
+}
+
+.img-box{
+    margin: 0 0 10px 0;
+}
+
+.img-placeholder{
+    height: 140px;
+    border-radius: var(--radius);
+    border: 2px solid rgba(0,0,0,0.10);
+    background: linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    color: #0b2b5f;
+}
+
+.series{
+    margin: 10px 0 0 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.resource{
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.12);
+    background: linear-gradient(180deg, #ffffff, #fff2dc);
+}
+
+.linkline{
+    margin: 8px 0 0 0;
+}
+
+a{
+    color: #0b4db3;
+    text-decoration: underline;
+}
+
+a:hover{
+    color: #071c3f;
+    text-decoration: underline;
+}
+
+.site-footer{
+    margin-top: 18px;
+    background: linear-gradient(90deg, var(--bg2), var(--bg2));
+    border-top: 4px solid var(--accent2);
+    color: #fff;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+}
+
+.muted{
+    color: rgba(225,255,255,0.85);
+}
+
+.img-placeholder[data-character]{
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.img-placeholder[data-character]:hover,
+.img-placeholder[data-character]:focus{
+  transform: scale(1.03);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.18);
+  outline: none;
+}
+
+.img-placeholder[data-character="goku"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/dragonball/images/b/ba/Goku_anime_profile.png/revision/latest/scale-to-width-down/1000?cb=20250723190513"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="vegeta"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/awesomeheroes/images/a/a9/Vegeta.png/revision/latest?cb=20160125193456"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="gohan"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/dragonball/images/3/3b/Gohan_anime_profile_3.png/revision/latest?cb=20250617191059"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="piccolo"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/protagonists/images/c/c0/Piccolo_Jr.png/revision/latest?cb=20180412221737"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="bulma"]{
+  background-image:
+    url("https://www.giantbomb.com/a/uploads/scale_super/3/34651/3472134-5889778544-dchj9.png"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="krillin"]{
+  background-image:
+    url("https://upload.wikimedia.org/wikipedia/en/0/04/Kuririn.png"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="trunks"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/teamfourstar/images/6/6f/Mirai_trunks.png/revision/latest?cb=20200802144815"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="frieza"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/dragonball/images/e/ee/DBS_Broly_Frieza_Render.png/revision/latest?cb=20221019232854"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="cell"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/pure-evil-wiki/images/6/60/Perfection.png/revision/latest?cb=20200605173952"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="majinbuu"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/dragonballfighterz/images/6/62/Majin_Buu_Artwork.png/revision/latest/thumbnail/width/360/height/450?cb=20180902173633"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="beerus"]{
+  background-image:
+    url("https://static.tvtropes.org/pmwiki/pub/images/beerus_artwork_7.png"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+.img-placeholder[data-character="whis"]{
+  background-image:
+    url("https://static.wikia.nocookie.net/p__/images/a/a1/Whis_Broly.png/revision/latest?cb=20190814011643&path-prefix=protagonist"),
+    linear-gradient(135deg, rgba(242,138,0,0.18), rgba(255,211,77,0.20));
+}
+
+/* Better view popup */
+.db-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 9999;
+}
+
+.db-lightbox.is-open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.db-lightbox__content{
+  position: relative;
+  width: min(88vw, 560px);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.28);
+  text-align: center;
+}
+
+.db-lightbox__figure{
+  width: 100%;
+  height: 420px;
+  border-radius: 14px;
+  border: 2px solid rgba(0,0,0,0.10);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff8ef;
+}
+
+.db-lightbox__caption{
+  margin: 12px 0 0 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #071c3f;
+}
+
+.db-lightbox__close{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 999px;
+  background: #f28a00;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.db-lightbox__close:hover{
+  background: #cf7300;
+}
+
+@media (max-width: 700px){
+  .db-lightbox__content{
+    width: 94vw;
+    padding: 14px;
+  }
+
+  .db-lightbox__figure{
+    height: 300px;
+  }
+}
